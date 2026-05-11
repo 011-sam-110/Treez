@@ -22,6 +22,7 @@ PACKAGES = [
     "pyautogui",
     "pyperclip",
     "openai",
+    "qrcode",
 ]
 
 # ── 1. Create a clean venv ────────────────────────────────────────────────────
@@ -48,6 +49,10 @@ cmd = [
     "--hidden-import", "openai.resources.chat.completions",
     "--hidden-import", "httpx",
     "--hidden-import", "anyio",
+    "--hidden-import", "qrcode",
+    "--hidden-import", "qrcode.image.base",
+    "--hidden-import", "qrcode.image.pure",
+    "--collect-submodules", "qrcode",
     "--collect-data", "certifi",
     "--distpath", os.path.join(BASE_DIR, "dist"),
     "--workpath", os.path.join(TEMP_DIR, "build"),
