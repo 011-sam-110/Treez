@@ -19,6 +19,7 @@ ADD_DATA = f"{ICON};."
 
 PACKAGES = [
     "pyinstaller",
+    "pyside6",
     "pyautogui",
     "pyperclip",
     "openai",
@@ -53,6 +54,7 @@ cmd = [
     "--hidden-import", "qrcode.image.base",
     "--hidden-import", "qrcode.image.pure",
     "--collect-submodules", "qrcode",
+    "--collect-all", "PySide6",
     "--collect-data", "certifi",
     "--distpath", os.path.join(BASE_DIR, "dist"),
     "--workpath", os.path.join(TEMP_DIR, "build"),
